@@ -3,6 +3,7 @@ import * as  cookieParser from'cookie-parser';
 import * as  logger from 'morgan'
 import PropertyRouter from './routes/properties'
 import {PuppeteerManager} from "./PuppeteerManager";
+import * as cors from 'cors'
 const path = require('path');
 
 class SpinalPuppeteerViewer {
@@ -15,7 +16,7 @@ class SpinalPuppeteerViewer {
     }
 
     private configure(){
-
+        this.app.use(cors());
         this.app.use(logger('dev'));
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: false }));
