@@ -22,6 +22,7 @@ export default function (puppeteerManager: PuppeteerManager) {
         const urn: string = req.params.urn;
         const propertyName: string = req.params.propertyName;
 
+        console.log(propertyName);
 
         if (requestedURN.hasOwnProperty(urn)) {
             const p = path.resolve("bin",requestedURN[urn] );
@@ -49,7 +50,7 @@ export default function (puppeteerManager: PuppeteerManager) {
 
                 return res.status(200).json(msg);
             } catch (e) {
-                console.log(e)
+                console.error(e)
                 return res.status(500).json(e)
             }
 
