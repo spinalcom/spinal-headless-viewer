@@ -1,9 +1,9 @@
 {
   "name": "spinal-headless-viewer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "tsc && node ./bin/www",
+    "start": "tsc && nodejs ./bin/www",
     "build": "tsc"
   },
   "dependencies": {
